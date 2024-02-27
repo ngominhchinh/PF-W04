@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số đảo ngược</title>
+</head>
+<body>
+    <script>
+        let num = +prompt("Nhập số");
+        let rev =0;
+        while(num > 0){
+            let t = num%10;
+            rev = rev* 10 + t;
+            num = parseInt(num/10);
+        }
+        alert(rev);
+    </script>
+</body>
+</html>
