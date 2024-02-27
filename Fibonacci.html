@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <h4 id="print"></h4>
+    <script>
+        let html='1, 1, ';
+        let n = +prompt("Nhập n");
+        let st=1;
+        let ss = 1;
+        let s;
+
+        for(let i=3; i<= n; i++){
+            s = st +ss;
+            html += s +', ';
+            st = ss;
+            ss = s            
+        }
+        document.getElementById("print").innerHTML = html;
+    </script>
+</body>
+</html>
