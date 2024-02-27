@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game đoán số</title>
+</head>
+
+<body>
+    <button id="btn">Chơi</button>
+
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let max = +prompt("Nhập số lớn nhất");
+            let rd = parseInt(Math.random() * max) + 1;
+
+
+            let count = 0;
+            do {
+                let so = +prompt("Số bạn chọn là:");
+                if (so == rd) {
+                    alert("Bạn chọn đúng");
+                    break;
+                } else {
+                    alert(`Số chương trình là: ${rd}, số bạn chọn là: ${so}`);
+                    count++;
+                    if (count == 3) {
+                        alert(`Bạn đã hết lượt chơi`);
+                        break;
+                    }
+                }
+
+            } while (count <= 3)
+        }
+    </script>
+</body>
+
+</html>
