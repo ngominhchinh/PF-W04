@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In bảng cửu chương</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <p id="print"></p>
+
+    <script>
+        let html = '<table border="1">';
+        for(let i =1; i<=10; i++){
+            html += `<tr>`;
+            for(let j=2; j<=9; j++){
+                html += `
+                    <td> 
+                        ${j} x ${i} = ${j*i}
+                    </td>`
+            }
+            html += `</tr>`;
+        }
+        html += `</table>`
+        document.getElementById("print").innerHTML = html;
+    </script>
+</body>
+</html>
