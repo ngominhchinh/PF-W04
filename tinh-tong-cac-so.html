@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  a = +prompt("Nhập a");
+        let b = +prompt("Nhập b");
+        if(b<a){
+            alert("Vui lòng nhập số b lớn hơn a");
+        } else{
+            let sum = 0;
+            for(let i=a; i<=b; i++){
+                sum += i;
+            }
+            alert(`Tổng các số từ ${a} đến ${b} là: ${sum}`);
+        }
+    </script>
+</body>
+</html>
