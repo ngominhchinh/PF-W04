@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="xuat"></p>
+    <!--Bài tập số Fibonacci chia hết cho 5 đầu tiên-->
+    <!-- <script>
+        let st = 1;
+        let ss = 1;
+        let sn;
+        let n = 3;
+        let count =0;
+        let result;
+        while(count < 1){
+            sn = st + ss;
+            if(sn % 5 ==0){
+                result = sn;
+                count++;
+            } else{
+                st = ss;
+                ss = sn;
+            }
+        }
+        alert(result);
+    </script> -->
+
+    <!--Bài tập Fizz Buzz-->
+    <script>
+        let f = 'Fizz';
+        let b = 'Buzz';
+        let html = '';
+
+        for(let i=1; i<=100; i++){            
+            let s ='';
+            if(i%3==0 && i%5==0){
+                s = f+b;
+            } else if(i%5 ==0){
+                s = b;
+            } else if(i%3==0){
+                s = f;
+            }
+            html += `${i}: ${s}` +'<br>';
+        }
+        document.getElementById("xuat").innerHTML = html;
+    </script>
+</body>
+</html>
