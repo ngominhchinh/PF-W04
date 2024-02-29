@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ tam giác</title>
+</head>
+
+<body>
+    <p id="hinh1"></p>
+    <p id="hinh2"></p>
+    <p id="hinh3"></p>
+    <p id="hinh4"></p>
+    
+    <!--
+        *
+        **
+        ***
+        ****
+        *****
+    -->
+    <script>
+        let html1 ='';
+        for(let i=1; i<=5; i++){
+            html1 += '*'.repeat(i) + "<br>";
+        }
+        document.getElementById("hinh1").innerHTML = html1;
+    </script>
+    <br>
+    <!--
+        *****
+        ****
+        ***
+        **
+        *
+    -->
+    <script>
+        let html2 ='';
+        for(let i=5; i>=1; i--){
+            html2 += '*'.repeat(i) + "<br>";
+        }
+        document.getElementById("hinh2").innerHTML = html2;
+    </script>
+    <br>
+    <!--
+            *
+           **
+          ***
+         ****
+        *****
+    -->
+
+    <script>
+        let html3 ='';
+        for(let i=1; i<=5; i++){
+            for(let j=0; j<5-i; j++){
+                html3 += " &nbsp;";
+            }
+           for(let k=1; k<=i; k++){
+            html3 += '*';
+           }
+           html3 += "<br>";
+        }
+        document.getElementById("hinh3").innerHTML = html3;
+    </script>
+
+    <!--
+        *****
+         ****
+          ***
+           **
+            *
+    -->
+
+    <script>
+        let html4 = '';
+        for (let i = 1; i <= 5; i++) {
+
+            for (let k = 1; k <= i - 1; k++) {
+                html4 += ' &nbsp;';
+            }
+            for (let j = 0; j <= 5 - i; j++) {
+                html4 += '*';
+            }
+            html4 += "<br>";
+        }
+        document.getElementById("hinh4").innerHTML = html4;
+    </script>
+</body>
+
+</html>
