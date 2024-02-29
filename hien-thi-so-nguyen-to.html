@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = +prompt("Nhập các số nguyên tố cần hiển thị");
+        let count = 0;
+        let n = 2;
+        let message = '';
+        while (count <= num) {
+            if (kiemTraSoNguyenTo(n) == true) {
+                message += n + ", ";
+                count++;
+                n++;
+            } else {
+                n++;
+            }
+        }
+        alert(message);
+
+
+        function kiemTraSoNguyenTo(a) {
+            let result = true;
+            if (a == 2) {
+                result = true;
+            } else {
+                for (let i = 2; i <= a / 2; i++) {
+                    if (a % i == 0) {
+                        result = false;
+                    }
+                }
+            }
+
+            return result;
+        }
+
+
+    </script>
+</body>
+
+</html>
